@@ -1,0 +1,501 @@
+Island_Phrase_Delet;Island_Asign_Submit;Island_Asign_Return;Island_to_Group;Group_from_Island;Group_to_Group;Group_from_Group;Island_final_Submit;Group_final_Asign
+ French Polynesia*;Eniwetok;Enewetak;Sonsorol;Southern Palau;Manua;Samoa;Pearl & Hermes;NW Hawaiian
+ Polynesia*;Tahaa;Taha'a;Belep;New Caledonia;Vanuatu;New Hebrides;Aunu'u;Samoa
+\\s*\\([^\\)]+\\);Tabueran;Tabuaeran;Bonins;Bonin;Admiralty;Solomon_Bismark;Ofu;Samoa
+ Cook Islands;Mauke;Ma'uke;Bonin;Bonin;Kermandec;Kermadec;Olosega;Samoa
+ Atoll;Maugs;Maug;Solomons;Solomon_Bismark;Northern Mariana;Mariana;Swains;Tokelau
+ Lau Islands;Nuutela;Nu'utele;Bismarcks;Solomon_Bismark;Jarvis;Line;Ta'u;Samoa
+ Chile;Canton;Kanton;Bismarks;Solomon_Bismark;Midway;NW Hawaiian;Tutuila;Samoa
+,*;Ka'ula Rock;Ka'ula;Solomon;Solomon_Bismark;Society Islands;Society;Aitutaki;Southern Cook
+ Marianas;New Caledonia;Grande Terre;Bismarck;Solomon_Bismark;Admiralty Islands;Solomon_Bismark;Atiu;Southern Cook
+ Phoenix Islands;Hatutaa;Hatuta'a;Bismark;Solomon_Bismark;Fiji Islands;Fiji;Mangaia;Southern Cook
+ Northern Lines;Aunuu;Aunu'u;Galapagos;Galapagos;Solomon Islands;Solomon_Bismark;Ma'uke;Southern Cook
+ Marshalls;Mitiaro;Miti'aro;Fijis;Fiji;Temotu Islands;Solomon_Bismark;Manuae;Southern Cook
+ Fijis;Bellingshausen;Motu One;Fiji;Fiji;Western Samoa Islands;Samoa;Manihiki;Northern Cook
+ Volcan;Sydney;Manra;Philippines;Philippines;Line Islands;Line;Miti'aro;Southern Cook
+ Republic of;Tau;Ta'u;Philippine;Philippines;Palau Islands;NA;Nassau;Northern Cook
+Ecuador;Maria;Hull;Hawaiians;Hawaiian;Tungaru Islands;Tungaru;Palmerston;Southern Cook
+Punta Bowditch ;Gardner;Nikumaroro;Hawaiian;Hawaiian;New Hebrides Islands;New Hebrides;Penrhyn;Northern Cook
+ Islet;Ta'una;Tauna;Cooks;NA;Rock Islands;Northern Palau;Pukapuka;Northern Cook
+/(.*)\s+$/;Gaioio;Tarauru Roa;Cook;NA;French Polynesia Islands;NA;Rarotonga;Southern Cook
+Papua New Guinea;Gagil;Tomil;Kiribati;Line;Wallis and Futuna Islands;Wallis and Futuna;Rakahanga;Northern Cook
+New Guinea;Belep;Art;American Samoas;American Samoa;Vava'u Islands;Vava'u;Suwarrow;Northern Cook
+ Northern Lines;Bkul a Chesemiich;Mecherchar;Loyautes;Loyaute;Kayangel Atoll;Northern Palau;Takutea;Southern Cook
+ Marshalls;Rapa Nui;Easter;Kermadecs;Kermadec;Chuuk Islands;Chuuk;Aiwa;Fiji
+ Fijis;Lana'ihale;Lana'i;Grande Terres;New Caledonia;American Samoa;Samoa;Lakeba;Fiji
+Philipine Islands;Ngeremdiu;Ngeruktabel;Marshalls;Marshall;Cook Is.;Cook;Nasoata;Fiji
+ Islands;Santabel;Santa Isabel;Manuas;Samoa;Swains I.;Samoa;Nayau;Fiji
+ Galapagos;Vate;Efate;Chesterfields;NW Hawaiian;Manihiki Is.;Northern Cook;Rotuma;Rotuma
+ Solomon;San Crist*;San Cristobal;Admirality;Solomon_Bismark;Guam;Mariana;Guam;Mariana
+ New Caledonia;Espa*;Espanola;Marquesass;Marquesas;Kiribati Line Is.;Line;Kiritimati;Line
+ Tonga; Vanuatu;Bartolome;Tungarus;Tungaru;Phoenix Is.;Phoenix;Palmyra;Line
+ Tungaru;Espa#ola;Espanola;Wallis and Futunas;Wallis and Futuna;Marshall Is.;Marshall;Kanton;Phoenix
+ Line;Camp#on;Campion;Tongatapus;Tongatapu;Tubuai Is.;Tubuai;Enderbury;Phoenix
+ Kermadec;Pinz�n;Pinzon;Western Samoas;Samoa;Society Is.;Society;Nikumaroro;Phoenix
+ Ha'apai;Santa F#;Santa Fe;Tongataputapu;Tongatapu;Pitcairn Is.;Pitcairn;Hull;Tubuai
+ Bonin;R�bida;Rabida;Ha'apai;Ha'apai;Hawaiian Is.;Hawaiian;McKean;Phoenix
+ Ralik;Grande Terres;Grande Terre;Haapai;Ha'apai;Johnston I.;Johnston;Manra;Phoenix
+ Chuuk;'Atiu;Atiu;Hapai;Ha'apai;Easter Is.;Easter;Tabuaeran;Line
+ Koror;'Eua;Eua;Tokelaus;Tokelau;Juan Fernández Is.;Juan Fernandez;Teraina;Line
+ Lau;'Uiha;Uiha;Tuamotu;Tuamotu;Clipperton I.;Clipperton;Ailinginae;Marshall
+ Ratak;Ongea Ndriki;Ogea Ndriki;Tuamotus;Tuamotu;Norfolk I.;Norfolk;Enewetak;Marshall
+ Ha'apai;Tepoto Nord;Tepoto North;Tuvalus;Tuvalu;American Samoa Islands;Samoa;Majuro;Marshall
+ Lomaiviti;Tarauru-Roa;Tarauru Roa;Vanuatu;Vanuatu;Midway Atoll;NW Hawaiian;Rongelap;Marshall
+ Society;Lakemba;Lakeba;Yasawas;Fiji;Tongatapu Islands;Tongatapu;Alamagan;Mariana
+ Ratak;Agrigan;Agrihan;Marquesas;Marquesas;Temotu Islands;Solomon_Bismark;Agrihan;Mariana
+ Yap;Gardner;Nikumaroro;Tungaru;Tungaru;Kayangel Atoll;Northern Palau;Asuncion;Mariana
+ Midway;Gardener por Espan#ola;Gardner de Espanola;Sur;Solomon_Bismark;Chuuk Islands;Chuuk;Aguijan;Mariana
+ Cook;Rose;Motu O Manu;Pinz�n Islands;Galapagos;Fiji Islands;Fiji;Anatahan;Mariana
+ Pohnpei;Rennell;Mugaba;Espa#ola Islands;Galapagos;Philippines;NA;Farallon de Pajaros;Mariana
+ Loyaute;Sierra Negra;Isabela;Ngedobel;Northern Palau;Vava'u Islands;Vava'u;Guguan;Mariana
+ Peleliu;Sunday;Raoul;Ngidech;Northern Palau;Wallis and Futuna Islands;Wallis and Futuna;Maug;Mariana
+ Hatohobei;Tadiu;Totiw;Galapagos Islas;Galapagos;Tonga Islands;Tongatapu;Pagan;Mariana
+ Tongatapu;Tapahi;Tahiti;Northern Mariana;Mariana;Palau Islands;NA;Rota;Mariana
+ Sonsorol;Thithia;Cicia;Tonga;Tongatapu;Western Samoa Islands;Samoa;Sarigan;Mariana
+ Hunter and Matthew;Tuvutha;Tuvuca;Juan Fernandez;Juan Fernandez;Kermadec Islands;Kermadec;Saipan;Mariana
+ Kayangel;Yanutha;Yanuca;Chuuk;Chuuk;Chesterfield Islands;NW Hawaiian;Tinian;Mariana
+ NW Hawaiian;Yathata;Yacata;Wallis and Futuna;Wallis and Futuna;Tuvalu Islands;Tuvalu;Grande Terre;New Caledonia
+ Midway;Malakal;Koror;Western Samoa;Samoa;French Polynesia Islands;NA;Nauru;Nauru
+ D'Entrecasteaux Reefs;Makongai;Makogai;Kermadec;Kermadec;Isabela Islands;Galapagos;Agakauitai;Gambier
+ Pitcairn;Fulanga;Fulaga;Tuvalu;Tuvalu;Loyaute Islands;Loyaute;Raivavae;Tubuai
+;Bokak;Taongi;Aleipatas;Samoa;Phoenix;Phoenix;Rimatara;Tubuai
+;Maugs;Maug;Loyaute;Loyaute;American Samoa Islands;Samoa;Rurutu;Tubuai
+;Eniwetok;Enewetak;American Samoa;Samoa;Pinzï¿½n Islands;Galapagos;Tubuai;Tubuai
+;Gardner por Espa#ola;Gardner por Espanola;Lau;Fiji;Pinz�n Islands;Galapagos;Motu One;Society
+;Pinzï¿½n;Pinzon;Tokelau;Tokelau;Midway Atoll;NW Hawaiian;Rapa;Bass
+;Gardner por Espa#ola;Gardner;Loma-i-Viti;Fiji;Espa#ola Islands;Galapagos;Akamaru;Gambier
+;San Crist�bal;San Cristobal;Marshall;Marshall;Santa Cruz Islands;Galapagos;Aukena;Gambier
+;Noreste de Santa F#;Santa Fe;Mamanuthas;Fiji;Tokelau Islands;Tokelau;Mangareva;Gambier
+;Pinz�n;Pinzon;Aleipata;Samoa;New Hebrides Islands;New Hebrides;Taravai;Gambier
+;R�bida;Rabida;Line;Line;Marshall Islands;Marshall;Tauna;Gambier
+;Nasoata Fiji;Nasoata;Admiralty;Solomon_Bismark;Manua Islands;Samoa;Tekava;Gambier
+;Kiritimati Northern Line;Kiritimati;Exploring;Fiji;Solomon Islands;Solomon_Bismark;Temoe;Gambier
+;Palmyra Norther Line;Palmyra;Palau;NA;Line Islands;Line;Tarauru Roa;Gambier
+;Alejandro Selkirk Island Juan Fernadez;Alejandro Selkirk;French;NA;Temotu Islands;Solomon_Bismark;Henderson;Pitcairn
+;Teraina Norther Line;Teraina;Norte;NA;Admiralty Islands;Solomon_Bismark;Eiao;Marquesas
+;Pagan Mariana;Pagan;Pitcairn Pitcairn;Pitcairn;Society Islands;Society;Fatu Hiva;Marquesas
+;Asuncion Island;Asuncion;New Caledonia;New Caledonia;Floreana Islands;Galapagos;Fatu Huku;Marquesas
+;Johnston Island;Johnston;Howland-Baker Is.;Howland_Baker;Tongatapu Islands;Tongatapu;Hatuta'a;Marquesas
+;Easter Island;Easter;;;Darwin Islands;Darwin;Hiva Oa;Marquesas
+;Robinso Crusoe Island Juan Fernandez;Robinson Crusoe;;;Kiribati (Republic of);Line;Mohotani;Marquesas
+;Santa Clara Island Juan Fernadez;Santa Clara;;;Santiago Islands;Galapagos;Nuku Hiva;Marquesas
+;Clipperton Island;Clipperton;;;Wolf Islands;Galapagos;Tahuata;Marquesas
+;Norfolk Island;Norfolk;;;Tonga;Tongatapu;Ua Huka;Marquesas
+;Kambara;Kabara;;;Northern Marianas;Mariana;Ua Pou;Marquesas
+;Ngau;Gau;;;Mauritius;NA;Oeno;Pitcairn
+;Mango;Mago;;;Exploring;Fiji;Pitcairn;Pitcairn
+;Alejandro Selkirk Mas Afuera;Alejandro Selkirk;;;;;Bora Bora;Society
+;Robinson Crusoe Mas a Tierra;Robinson Crusoe;;;;;Huahine;Society
+;Kandavu;Kadavu;;;;;Maiao;Society
+;Mbengga;Beqa;;;;;Maupiti;Society
+;Mothe;Moce;;;;;Mehetia;Society
+;Naitamba;Naitaba;;;;;Moorea;Society
+;Alcedo;Isabela;;;;;Mopelia;Society
+;Cerro Azul;Isabela;;;;;Raiatea;Society
+;Fayu;Fayo;;;;;Taha'a;Society
+;Naitamba;Naitaba;;;;;Tetiaroa;Society
+;Eastern;Easter;;;;;Tahiti;Society
+;Rambi;Rabi;;;;;Tupai;Society
+;Oeste;Punta Bowditch Oeste;;;;;Fakahina;Tuamotu
+;Kanathea;Kanacea;;;;;Fangataufa;Tuamotu
+;Mbatiki;Batiki;;;;;Hao;Tuamotu
+;Banks;NA;;;;;Kaukura;Tuamotu
+;Nggamea;Taveuni;;;;;Makatea;Tuamotu
+;Yanutha Levu;Yanuca Levu;;;;;Manihi;Tuamotu
+;Manua;Olosega;;;;;Matureivavao;Tuamotu
+;Russell;Pavuvu;;;;;Moruroa;Tuamotu
+;Ongea Levu;Ogea Levu;;;;;Niau;Tuamotu
+;Gizo;Ghizo;;;;;Rangiroa;Tuamotu
+;Mauritius;NA;;;;;Taiaro;Tuamotu
+;Puohine;Raiatea;;;;;Takapoto;Tuamotu
+;Este;Punta Bowditch Este;;;;;Tenararo;Tuamotu
+;Guy Fawkes Oeste;Guy Fawkes;;;;;Tenarunga;Tuamotu
+;Guy Fawkes Sur;Guy Fawkes;;;;;Tikehau;Tuamotu
+;'Atata;Atata;;;;;Tepoto North;Tuamotu
+;Majuro Marshall;Majuro;;;;;Toau;Tuamotu
+;Eniwetok Mashall;Enewetak;;;;;Vahanga;Tuamotu
+;Henderson Pitcairn;Henderson;;;;;Tongatapu;Tongatapu
+;Oeno Pitcairn;Oeno;;;;;French Frigate Shoals;NW Hawaiian
+;New Britain Bismarck;New Britain;;;;;Hawai'i;Hawaiian
+;TerraGrande;Grande Terre;;;;;Kaho'olawe;Hawaiian
+;Hawai'i Island;Hawai'i;;;;;Ka'ula;Hawaiian
+;Bougainville Solomon;Bougainville;;;;;Kaua'i;Hawaiian
+;Guadalcanal Solomon;Guadalcanal;;;;;Kure;NW Hawaiian
+;Santa Isabel Solomon;Santa Isabel;;;;;Lana'i;Hawaiian
+;Malaita Solomon;Malaita;;;;;Laysan;NW Hawaiian
+;Makira Solomon;Makira;;;;;Lehua;Hawaiian
+;New Georgia Solomon;New Georgia;;;;;Lisianski;NW Hawaiian
+;Malekula Vanuatu;Malekula;;;;;Maui;Hawaiian
+;Los Negros Admiralty;Los Negros;;;;;Midway;NW Hawaiian
+;Maui Island;Maui;;;;;Moloka'i;Hawaiian
+;Savai'i Samoa;Savai'i;;;;;Nihoa;NW Hawaiian
+;O'ahu Island;O'ahu;;;;;Ni'ihau;Hawaiian
+;Kaua'i Island;Kaua'i;;;;;O'ahu;Hawaiian
+;Lifou New Caledonia;Lifou;;;;;Johnston;Johnston
+;Upolu Samoa;Upolu;;;;;Fanuatapu;Samoa
+;Moloka'i Island;Moloka'i;;;;;Namua;Samoa
+;Long Island ;Long Island;;;;;Nuulua;Samoa
+;Lana'i Island;Lana'i;;;;;Nu'utele;Samoa
+;VanuaLava;Vanua Lava;;;;;Easter;Easter
+;Ni'ihau Island;Ni'ihau;;;;;Alejandro Selkirk Mas Afuera;Juan Fernandez
+;IleDesPines;Ile des Pins;;;;;Robinson Crusoe Mas a Tierra;Juan Fernandez
+;Kaho'olawe Island;Kaho'olawe;;;;;Santa Clara;Juan Fernandez
+;Wallis Wallis and Futuna;Wallis;;;;;Clipperton;Clipperton
+;Masatierra;Robinson Crusoe;;;;;Norfolk;Norfolk
+;IleArt;Art;;;;;Eua;Tongatapu
+;Futuna Wallis and Futuna;Futuna;;;;;Uiha;Ha'apai
+;Lifuka and Foa;Lifuka;;;;;Anuta;Solomon_Bismark
+;Lord Howe Island;Lord Howe;;;;;Arno;Marshall
+;Alofi Wallis and Futuna;Alofi;;;;;Babeldaob;Northern Palau
+;Wake Island;Wake;;;;;Bougainville;Solomon_Bismark
+;Laysan Island;Laysan;;;;;Dublon;Chuuk
+;Lisianski Island;Lisianski;;;;;Fais;Yap
+;Lehua Island;Lehua;;;;;Fefan;Chuuk
+;Navutu-I-Ra;Navutu-i-Ra;;;;;Ifalik;Yap
+;Ka'ula Island;Ka'ula;;;;;Kabara;Fiji
+;Nihoa Island;Nihoa;;;;;Kayangel;Northern Palau
+;Matthew Hunter and Matthew;Matthew;;;;;Kosrae;Kosrae
+;Surprise D'Entrecasteaux Reefs;Surprise ;;;;;Late;Vava'u
+;Molokini Island;Molokini;;;;;Niue;Niue
+;Alejandro Selkirkland Juan Fernadez;Alejandro Selkirk;;;;;Ouvea;Loyaute
+;Robinso Crusoeland Juan Fernandez;Robinson Crusoe;;;;;Peleliu;Northern Palau
+;Santa Claraland Juan Fernadez;Santa Clara;;;;;Pohnpei;Pohnpei
+;Palmyra Norther;Aviation;;;;;Savai'i;Samoa
+;Teraina Norther;Washington;;;;;Taveuni;Fiji
+;Easterland;Easter;;;;;Tobi;Southern Palau
+;Kiritimati Northern;Kiritimati;;;;;Tol;Chuuk
+;;;;;;;Ulithi;Yap
+;;;;;;;Uman;Chuuk
+;;;;;;;Upolu;Samoa
+;;;;;;;Vanua Levu;Fiji
+;;;;;;;Vanua Mbalavu;Fiji
+;;;;;;;Viti Levu;Fiji
+;;;;;;;Wallis;Wallis and Futuna
+;;;;;;;Weno;Chuuk
+;;;;;;;Yanagi;Chuuk
+;;;;;;;Yap;Yap
+;;;;;;;Angaur;Northern Palau
+;;;;;;;Floreana;Galapagos
+;;;;;;;Fulaga;Fiji
+;;;;;;;Kao;Ha'apai
+;;;;;;;Koro;Fiji
+;;;;;;;Koror;Northern Palau
+;;;;;;;Lifou;Loyaute
+;;;;;;;Lifuka;Ha'apai
+;;;;;;;Navutu-i-Loma;Fiji
+;;;;;;;Gau;Fiji
+;;;;;;;Niuafo'ou;Vava'u
+;;;;;;;Niuatoputapu;Vava'u
+;;;;;;;Ogea Levu;Fiji
+;;;;;;;Parem;Chuuk
+;;;;;;;Santa Cruz;Galapagos
+;;;;;;;Surprise;New Caledonia
+;;;;;;;Tafahi;Vava'u
+;;;;;;;Sand;NW Hawaiian
+;;;;;;;Baker;Howland_Baker
+;;;;;;;Banaba;Nauru
+;;;;;;;Farallon de Medinilla;Mariana
+;;;;;;;Jaluit;Marshall
+;;;;;;;Jarvis;Line
+;;;;;;;Sonsorol;Southern Palau
+;;;;;;;Tarawa;Tungaru
+;;;;;;;Guadalcanal;Solomon_Bismark
+;;;;;;;Ngercheu;Northern Palau
+;;;;;;;Ngerkebesang;Northern Palau
+;;;;;;;San Cristobal;Galapagos
+;;;;;;;Ile des Pins;New Caledonia
+;;;;;;;Wake;Wake
+;;;;;;;Butaritari;Tungaru
+;;;;;;;Amere;New Caledonia
+;;;;;;;Ana'a;Tuamotu
+;;;;;;;Apataki;Tuamotu
+;;;;;;;Art;New Caledonia
+;;;;;;;Bacon;Fiji
+;;;;;;;Eauripik;Yap
+;;;;;;;Faraulep;Yap
+;;;;;;;Hiti;Tuamotu
+;;;;;;;Hunter;Hunter and Matthew
+;;;;;;;Huon;New Caledonia
+;;;;;;;Isabela;Galapagos
+;;;;;;;Kadavu;Fiji
+;;;;;;;Kapingamarangi;Pohnpei
+;;;;;;;Katiu;Tuamotu
+;;;;;;;Kauehi;Tuamotu
+;;;;;;;Lord Howe;Lord Howe
+;;;;;;;Lukunor;Chuuk
+;;;;;;;Mago;Fiji
+;;;;;;;Mare;Loyaute
+;;;;;;;Marutea Sud;Tuamotu
+;;;;;;;Matuku;Fiji
+;;;;;;;Beqa;Fiji
+;;;;;;;Merir;Southern Palau
+;;;;;;;Moala;Fiji
+;;;;;;;Mokil;Pohnpei
+;;;;;;;Murilo;Chuuk
+;;;;;;;Nama;Chuuk
+;;;;;;;Namoluk;Chuuk
+;;;;;;;Namonuito;Chuuk
+;;;;;;;Napuka;Tuamotu
+;;;;;;;Ngeanges;Northern Palau
+;;;;;;;Nomwin;Chuuk
+;;;;;;;Nui;Tuvalu
+;;;;;;;Nukutavake;Tuamotu
+;;;;;;;Paraoa;Tuamotu
+;;;;;;;Pis;Chuuk
+;;;;;;;Puluwat;Chuuk
+;;;;;;;Raroia;Tuamotu
+;;;;;;;Reao;Tuamotu
+;;;;;;;Satawal;Yap
+;;;;;;;Satawan;Chuuk
+;;;;;;;Sorol;Yap
+;;;;;;;Taenga;Tuamotu
+;;;;;;;Takume;Tuamotu
+;;;;;;;Tikei;Tuamotu
+;;;;;;;Tofua;Ha'apai
+;;;;;;;Tuanake;Tuamotu
+;;;;;;;Tureia;Tuamotu
+;;;;;;;Vanavana;Tuamotu
+;;;;;;;Walpole;Loyaute
+;;;;;;;Woleai;Yap
+;;;;;;;Pinta;Galapagos
+;;;;;;;Ovalau;Fiji
+;;;;;;;Lifuka and Foa;Ha'apai
+;;;;;;;Ndeni;Solomon_Bismark
+;;;;;;;Nukuoro;Pohnpei
+;;;;;;;Abaiang;Tungaru
+;;;;;;;Abemama;Tungaru
+;;;;;;;Arorei;Tungaru
+;;;;;;;Jemo;Marshall
+;;;;;;;Kwajalein;Marshall
+;;;;;;;Likiep;Marshall
+;;;;;;;Nikunau;Tungaru
+;;;;;;;Ngchus;Northern Palau
+;;;;;;;Pingelap;Pohnpei
+;;;;;;;Santiago;Galapagos
+;;;;;;;Tiga;Loyaute
+;;;;;;;Totoya;Fiji
+;;;;;;;Wakaya;Fiji
+;;;;;;;Raoul;Kermadec
+;;;;;;;Morro Juanango;Juan Fernandez
+;;;;;;;Futuna;Wallis and Futuna
+;;;;;;;Mili;Marshall
+;;;;;;;Ailuk;Marshall
+;;;;;;;Ant;Pohnpei
+;;;;;;;Ebon;Marshall
+;;;;;;;Etal;Chuuk
+;;;;;;;Fayo;Chuuk
+;;;;;;;Kili;Marshall
+;;;;;;;Lae;Marshall
+;;;;;;;Lamotrek;Yap
+;;;;;;;Mejit;Marshall
+;;;;;;;Namu;Marshall
+;;;;;;;Pulap;Chuuk
+;;;;;;;Pulusuk;Chuuk
+;;;;;;;Ujelang;Marshall
+;;;;;;;Baltra;Galapagos
+;;;;;;;Mikira;Solomon_Bismark
+;;;;;;;Aulupse'el;Northern Palau
+;;;;;;;Tomil;Yap
+;;;;;;;Naitaba;Fiji
+;;;;;;;Totegegie;Gambier
+;;;;;;;Wotje;Marshall
+;;;;;;;Bikini;Marshall
+;;;;;;;Darwin;Galapagos
+;;;;;;;Espanola;Galapagos
+;;;;;;;Campion;Galapagos
+;;;;;;;New Britain;Solomon_Bismark
+;;;;;;;Malden;Line
+;;;;;;;Santa Fe;Galapagos
+;;;;;;;Wolf;Galapagos
+;;;;;;;Morro El Verdugo;Juan Fernandez
+;;;;;;;Spit;NW Hawaiian
+;;;;;;;Ha'ano;Ha'apai
+;;;;;;;Pulo Ana;Southern Palau
+;;;;;;;Udot;Chuuk
+;;;;;;;Ngedbus;Northern Palau
+;;;;;;;Ha'afeva;Ha'apai
+;;;;;;;Nou;New Caledonia
+;;;;;;;Tanna;New Hebrides
+;;;;;;;Marakei;Tungaru
+;;;;;;;Namorik;Marshall
+;;;;;;;Utirik;Marshall
+;;;;;;;Maloelap;Marshall
+;;;;;;;Ngerchong;Northern Palau
+;;;;;;;Alofi;Wallis and Futuna
+;;;;;;;Fernandina;Galapagos
+;;;;;;;Flint;Line
+;;;;;;;Starbuck;Line
+;;;;;;;Yacata;Fiji
+;;;;;;;Nomuka;Ha'apai
+;;;;;;;Rabi;Fiji
+;;;;;;;Gardner por Espanola;Galapagos
+;;;;;;;Punta Bowditch Oeste;Galapagos
+;;;;;;;Osborn;Galapagos
+;;;;;;;Plaza Norte;Galapagos
+;;;;;;;Mecherchar;Northern Palau
+;;;;;;;Kanacea;Fiji
+;;;;;;;Mbanika;Solomon_Bismark
+;;;;;;;Batiki;Fiji
+;;;;;;;Nairai;Fiji
+;;;;;;;Ngchelobel;Northern Palau
+;;;;;;;Matthew;Hunter and Matthew
+;;;;;;;Albany;Galapagos
+;;;;;;;Eden;Galapagos
+;;;;;;;Mao;Galapagos
+;;;;;;;Prinzon;Galapagos
+;;;;;;;Punta Bowditch Norte;Galapagos
+;;;;;;;Rabida;Galapagos
+;;;;;;;Seymour Norte;Galapagos
+;;;;;;;Venecia;Galapagos
+;;;;;;;Pearl and Hermes;NW Hawaiian
+;;;;;;;Marcus;Marcus
+;;;;;;;Tabiteuea;Tungaru
+;;;;;;;Ujae;Marshall
+;;;;;;;Malakula;New Hebrides
+;;;;;;;Moce;Fiji
+;;;;;;;Scilly;Society
+;;;;;;;Ulalu;Chuuk
+;;;;;;;Kotu;Ha'apai
+;;;;;;;Aneityum;New Hebrides
+;;;;;;;Espirito Santo;New Hebrides
+;;;;;;;Helen Reef;Southern Palau
+;;;;;;;Navutu-i-Ra;Fiji
+;;;;;;;Ngemelis;Northern Palau
+;;;;;;;Ngerukuid;Northern Palau
+;;;;;;;Ontong Java;Solomon_Bismark
+;;;;;;;Santa Isabel;Solomon_Bismark
+;;;;;;;Tern;NW Hawaiian
+;;;;;;;Urukthapel;Northern Palau
+;;;;;;;Vanua Lava;New Hebrides
+;;;;;;;Ailinglaplap;Marshall
+;;;;;;;Aur;Marshall
+;;;;;;;Balabio;New Caledonia
+;;;;;;;Nonouti;Tungaru
+;;;;;;;Onotoa;Tungaru
+;;;;;;;Fano;Chuuk
+;;;;;;;Maiana;Tungaru
+;;;;;;;Orona;Phoenix
+;;;;;;;Wotho;Marshall
+;;;;;;;Ngeriungs;Northern Palau
+;;;;;;;Mosquera;Galapagos
+;;;;;;;Daphne Mayor;Galapagos
+;;;;;;;Gardner por Floreana;Galapagos
+;;;;;;;Los Negros;Solomon_Bismark
+;;;;;;;New Ireland;Solomon_Bismark
+;;;;;;;Makaroa;Gambier
+;;;;;;;Moturiki;Fiji
+;;;;;;;Vatulele;Fiji
+;;;;;;;Chelbacheb;Northern Palau
+;;;;;;;Lepredour;New Caledonia
+;;;;;;;Losap;Chuuk
+;;;;;;;Tuvuca;Fiji
+;;;;;;;Erromango;New Hebrides
+;;;;;;;Jabat;Marshall
+;;;;;;;Oneata;Fiji
+;;;;;;;Malaita;Solomon_Bismark
+;;;;;;;Maewo;New Hebrides
+;;;;;;;Kamaka;Gambier
+;;;;;;;Yande;New Caledonia
+;;;;;;;Olorua;Fiji
+;;;;;;;Yanuca Levu;Fiji
+;;;;;;;Chichi-jima;Bonin
+;;;;;;;Fanna;Southern Palau
+;;;;;;;Tamana;Tungaru
+;;;;;;;Aranuka;Tungaru
+;;;;;;;Beru;Tungaru
+;;;;;;;Makin;Tungaru
+;;;;;;;Efate;New Hebrides
+;;;;;;;Yanuca;Fiji
+;;;;;;;Genovesa;Galapagos
+;;;;;;;Pott;New Caledonia
+;;;;;;;Bab el Omekang;Northern Palau
+;;;;;;;Makogai;Fiji
+;;;;;;;Ngeruktabel;Northern Palau
+;;;;;;;Wailagi Lala;Fiji
+;;;;;;;Caroline;Line
+;;;;;;;Fakaofo;Tokelau
+;;;;;;;Nukunonu;Tokelau
+;;;;;;;Qamea;Fiji
+;;;;;;;Siis;Chuuk
+;;;;;;;Tepoto;Tuamotu
+;;;;;;;Baaba;New Caledonia
+;;;;;;;Rongerik;Marshall
+;;;;;;;Toke;Marshall
+;;;;;;;Bainbridge #6;Galapagos
+;;;;;;;Punta Bowditch Sur;Galapagos
+;;;;;;;Bainbridge #1;Galapagos
+;;;;;;;Bartolome;Galapagos
+;;;;;;;Marchena;Galapagos
+;;;;;;;Sombrero Chino;Galapagos
+;;;;;;;New Georgia;Solomon_Bismark
+;;;;;;;Ulong;Northern Palau
+;;;;;;;Namuka-i-Lau;Fiji
+;;;;;;;Mokapu;Hawaiian
+;;;;;;;Molokini;Hawaiian
+;;;;;;;Lines;NA
+;;;;;;;Ono;Fiji
+;;;;;;;Sovu;Fiji
+;;;;;;;Ghizo;Solomon_Bismark
+;;;;;;;Ouen;New Caledonia
+;;;;;;;Macauley;Kermadec
+;;;;;;;Taongi;Marshall
+;;;;;;;Erikub;Marshall
+;;;;;;;Gaferut;Yap
+;;;;;;;Motu O Manu;Samoa
+;;;;;;;Cicia;Fiji
+;;;;;;;Ambrym;New Hebrides
+;;;;;;;Mugaba;Solomon_Bismark
+;;;;;;;Marielas Sur;Galapagos
+;;;;;;;Elato;Yap
+;;;;;;;Totiw;Chuuk
+;;;;;;;Sikaiana;Solomon_Bismark
+;;;;;;;Vanikolo;Solomon_Bismark
+;;;;;;;Plaza Sur;Galapagos
+;;;;;;;Nengonengo;Tuamotu
+;;;;;;;Fakarava;Tuamotu
+;;;;;;;Marotiri;Bass
+;;;;;;;Caldwell;Galapagos
+;;;;;;;Fafa;Tongatapu
+;;;;;;;Velitoa;Tongatapu
+;;;;;;;Vatu Vara;Fiji
+;;;;;;;Etten;Chuuk
+;;;;;;;Cheeseman;Kermadec
+;;;;;;;Curtis;Kermadec
+;;;;;;;Fangatau;Tuamotu
+;;;;;;;Fanurmot;Chuuk
+;;;;;;;Kolombagara;Solomon_Bismark
+;;;;;;;Noreste de Santa Fe;Galapagos
+;;;;;;;Bainbridge #3;Galapagos
+;;;;;;;Bainbridge #4;Galapagos
+;;;;;;;Beagle Oeste;Galapagos
+;;;;;;;Enderby;Galapagos
+;;;;;;;Guy Fawkes Oeste largest SW;Galapagos
+;;;;;;;Guy Fawkes Sur 2nd largest SE;Galapagos
+;;;;;;;Howland;Howland_Baker
+;;;;;;;Long;Solomon_Bismark
+;;;;;;;Necker;Hawaiian
+;;;;;;;Cowley;Galapagos
+;;;;;;;Neba;New Caledonia
+;;;;;;;Katafanga;Fiji
+;;;;;;;Atata;Tongatapu
+;;;;;;;Uea;Fiji
+;;;;;;;Pinzon;Galapagos
+;;;;;;;Espanola;Galapagos
+;;;;;;;Vava'u;Vava'u
+;;;;;;;Ogea Ndriki;Fiji
+;;;;;;;Alejandro Selkirk;Juan Fernandez
+;;;;;;;Robinson Crusoe;Juan Fernandez
+;;;;;;;Santa Clara;Juan Fernandez
+;;;;;;;Chesterfield;NW Hawaiian
+;;;;;;;Pavuvu;Solomon_Bismark
+;;;;;;;Corona del Diablo Central;Galapagos
+;;;;;;;Guy Fawkes;Galapagos
+;;;;;;;Alejandro Selkirk;Juan Fernandez
+;;;;;;;Henderson;Pitcairn
+;;;;;;;Ngerebelas;Northern Palau
+;;;;;;;Orak;Northern Palau
+;;;;;;;Vava'u;Vava'u
+;;;;;;;Punta Bowditch Norte;Galapagos
+;;;;;;;Avation;Kiribati
+;;;;;;;Washington;Kiribati
+;;;;;;;Kiritimati;Kiribati
