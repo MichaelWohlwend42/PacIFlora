@@ -1,6 +1,6 @@
 ###########################################
 ###    Pacific Data Aggregation Script  ###
-### by M.R.Wohlwend v.4.0.4. 19.03.2021 ###
+### by M.R.Wohlwend v.4.0.5. 03.06.2021 ###
 ###########################################
 
 setwd("C:/Users/mwohl/Documents/PacificInvaders")
@@ -27,13 +27,30 @@ library(tidyr)
 
 #### Chapter 1: Harmonizing Rawdata - Pier ####
 
+pierref<-read.csv2("PierRef2.csv",header=F)
+pierref$refnr<-(sub(".*PIER reference ", "", pierref[,1]))
+pierref$REF<-(sub("PIER reference .*", "", pierref[,1]))
+
+pierref2<-read.csv2("wohlwend_ref_not_found_pier_1.csv",header=T)
+pierref2$REF<-paste(pierref2$Author.s.,pierref2$Year,pierref2$Remainder.of.citation,sep=",")
+pierref3<-read.csv2("wohlwend_ref_not_found_pier_2.csv",header=T)
+pierref3$REF<-paste(pierref3$Author.s.,pierref3$Year,pierref3$Remainder.of.citation,sep=",")
 
 pier2<-fread("Old_Data/PIER_SppPresences.csv") 
 
 
+for(i in which(pier2$PierBibliogReference%in%pierref$refnr)){
+  pier2$PierBibliogReference[i]<-pierref$REF[which(pierref$refnr==pier2$PierBibliogReference[i])]
+} #gives the child a name
+
+for(i in which(pier2$PierBibliogReference%in%as.character(pierref3$PIER.reference.number))){
+  pier2$PierBibliogReference[i]<-pierref3$REF[which(pierref3$PIER.reference.number==pier2$PierBibliogReference[i])]
+} #gives the child a name 2
+
+
 ## Cleaning & Selections
 
-pier2<-pier2[!c(grep(pattern = c(" "), x = pier2$PierBibliogReference)),]         # Removes corrupted/non referenced entries (n=41)
+pier2<-pier2[which(!is.na(pier2$ProduceSpList4ThisRegion.)),]         # Removes corrupted/non referenced entries (n=41)
 pier2<-pier2[which(pier2$PIER_region=="Pacific"),]                                # Removes non-Pacific entries
 pier2<-pier2[which(pier2$Ref.Non.NativeStatus%!in%c("Eradicated","Extirpated")),] # Removes expired records
 
@@ -92,6 +109,10 @@ for (i in 1:nrow(nat_rep)){
 
 dat_list2<-dat_list[which(dat_list$region_id%in%glonselect$region_id),]#which islands do you want
 dat_flora_orig2<-dat_flora_orig[which(dat_flora_orig$list_id%in%dat_list2$list_id),]# which species lists do you want
+glon_lit<-read.csv2("glonafdb_2021-05-31_recnum.csv",header=T)
+
+
+
 dat_taxon2<-dat_taxon[which(dat_taxon$taxon_orig_id%in%dat_flora_orig2$taxon_orig_id),]# which species are in that list
 hyb<-str_count(dat_taxon2$taxon_orig, pattern = " x ")
 dat_taxon2$Usage[which(hyb==0)]<-sub("^(\\S*\\s+\\S+).*", "\\1", dat_taxon2$taxon_orig[which(hyb==0)]) #shortens output to binomial style
@@ -128,7 +149,22 @@ dat_flora_orig2$invasive[which(dat_flora_orig2$invasive=="invasive")]<-1
 dat_flora_orig2$invasive[which(dat_flora_orig2$invasive!="1")]<-0 # splitting status into invasive and cultivated information
 dat_flora_orig2$presence_uncertain[which(is.na(dat_flora_orig2$presence_uncertain))]<-0.5 # rare, as communicated with anke stein
 dat_flora_orig2<-dat_flora_orig2[which(dat_flora_orig2$presence_uncertain!=1),] # removing uncertainties
-glon2<-dat_flora_orig2[,c("Assigned_Name","island","island_group","invasive","cultivated","questionably_native","Original_name")]
+
+table(dat_list2$endnote_rec_num%in%glon_lit$Nr)
+
+for (i in 1:nrow(dat_list2)){
+  dat_list2$source[i]<-glon_lit$Source[which(glon_lit$Nr==dat_list2$endnote_rec_num[i])]
+}
+unique(dat_list2$source)
+
+
+
+
+
+for(i in 1:nrow(dat_flora_orig2)){
+dat_flora_orig2$reference[i]<-dat_list2$source[which(dat_list2$list_id==dat_flora_orig2$list_id[i])]
+}
+glon2<-dat_flora_orig2[,c("Assigned_Name","island","island_group","invasive","cultivated","questionably_native","Original_name","reference")]
 glon2$questionably_native[which(is.na(glon2$questionably_native))]<-0 # as communicated with anke stein
 glon2$sp_is<-paste(glon2$Assigned_Name,glon2$island) #simplifies identifying unique entries later
 glon3<-glon2
@@ -153,10 +189,11 @@ for(i in which(glon3$Assigned_Name%in%glon_3000$Assigned_Name)){
 glon3$dataset<-"glon"
 pier2$dataset<-"pier"
 
-glon3<-glon3[,c("Assigned_Name","island","island_group","questionably_native","cultivated","family","order","dataset","invasive","Original_name")]
-pier3<-pier2[,c("species","island","islandgroup","nat_score","cult_stat","family","order","dataset","RefCitesAsInvasive.","TaxonCode")]
+glon3<-glon3[,c("Assigned_Name","island","island_group","questionably_native","cultivated","family","order","dataset","invasive","Original_name","reference")]
+pier3<-pier2[,c("species","island","islandgroup","nat_score","cult_stat","family","order","dataset","RefCitesAsInvasive.","TaxonCode","PierBibliogReference")]
 colnames(pier3)[9]<-"inva_stat"
 colnames(pier3)[10]<-"orginal_name"
+colnames(pier3)[11]<-"reference"
 
 colnames(glon3)<-colnames(pier3)
 
@@ -226,15 +263,61 @@ for(i in 1:nrow(pacific_is5)){
   pacific_is5$inva_stat[i]<-max(pacific_is5$inva_stat2[which(pacific_is5$sp_is==pacific_is5$sp_is[i])])
 } # reach consensus among authors on invasive status. 
 
-pacific_is5_rebind<-pacific_is5[which(is.na(pacific_is5$species)),]# takes NAs out to rebind later
+pacific_is5<-pacific_is5[which(pacific_is5$islandgroup!=""),]
 
-pacific_is5<-pacific_is5[which(!duplicated(pacific_is5$sp_is)),]
+pacific_is5_rebind<-pacific_is5[which((pacific_is5$species=="NA")),]# takes NAs out to rebind later
+mynewdoubles<-pacific_is5$sp_is[which(duplicated(pacific_is5$sp_is))]
+b_pacific_is5<-pacific_is5[which(pacific_is5$sp_is%in%mynewdoubles), ]
+b_pacific_is5$rspis<-paste(b_pacific_is5$sp_is,b_pacific_is5$reference)
+c_pacific_is5<-b_pacific_is5[which(!duplicated(b_pacific_is5$rspis)),]
+c_pacific_is5<-c_pacific_is5[which(c_pacific_is5$species!="NA"),]
+c_pacific_is5<-c_pacific_is5[which(!is.na(c_pacific_is5$species)),]
+
+duplicated_dataset<-c_pacific_is5[,c(1:11)]
+
+ref_table<-matrix(0,22,3)
+ref_table[,1]<-names(head(sort(table(pacific_is5$reference),decreasing = T),22))
+ref_table[,2]<-as.numeric(head(sort(table(pacific_is5$reference),decreasing = T),22))
+for (i in 1:nrow(ref_table)){
+  ref_table[i,3]<-paste(names(sort(table(pacific_is5$islandgroup[which(pacific_is5$reference==ref_table[i,1])]),decreasing = T)),collapse = ",")
+} # what this does: Sort out the island groups the authors we use the most deal with
+
+write.csv2(ref_table,"Reference_Overview.csv",row.names = F)
+myref_2<-matrix(0,length(unique(pacific_is5$reference)),2)
+myref_2[,1]<-unique(pacific_is5$reference)
+myref_2[,2]<-c(1:nrow(myref_2))
+
+
+
+for (i in 1:nrow(pacific_is5)){
+  pacific_is5$refid[i]<-paste(c(myref_2[which(myref_2[,1]==pacific_is5$reference[i]),2]),collapse = ",")
+}
+
+testref<-matrix(0,nrow(pacific_is5),4)
+testref[,1]<-pacific_is5$sp_is
+testref[,2]<-pacific_is5$refid
+testref[,3]<-pacific_is5$reference
+for(i in 1:nrow(pacific_is5)){
+pacific_is5$refid[i]<-paste(c(unique(testref[which(testref[,1]==pacific_is5$sp_is[i]),2])),collapse = ",")
+}
+
+for (i in 1:nrow(testref)){
+  testref[i]<-length((myref_2[which(myref_2[,1]==pacific_is5$reference[i]),2]))
+} 
+
+
+write.csv2(testref[which(!duplicated(testref[,2]))],"Reference_table_0106.csv")
+write.table(testref[which(!duplicated(testref[,2]))],"Reference_table_0306.txt",row.names=F)
+#okay so what this all was for to asign each entry all references that where found for it, but without pasting the text & profiding an extra table to look up where else they where found
+
+
+pacific_is5_b<-pacific_is5[which(!duplicated(pacific_is5$sp_is)),]
+
 pacific_is5_rebind<-pacific_is5_rebind[which(rownames(pacific_is5_rebind)%!in%rownames(pacific_is5)),]
 
-pacific_is6<-rbind(pacific_is5,pacific_is5_rebind)# positive sideeffect: Now all NA species are at the bottom of the list
-# here, you should bind your data when you have no status information
-
-
+pacific_is6<-rbind(pacific_is5_b,pacific_is5_rebind)# positive sideeffect: Now all NA species are at the bottom of the list
+##### Here, you could bind your data when you have no status information ####
+## pacific_is7<-rbind(pacific_is6,yourdata)
 
 #now every unique species island combination has one value
 
@@ -285,6 +368,13 @@ pacific_ar5_rebind<-pacific_ar5_rebind[which(rownames(pacific_ar5_rebind)%!in%ro
 pacific_ar6<-rbind(pacific_ar5,pacific_ar5_rebind)
 pacific_ar6<-pacific_ar6[which(pacific_ar6$islandgroup!=""),]
 
+pacific_is6$nat_score<-round(pacific_is6$nat_score,3)#due to technical reviewer request
+pacific_is6$species[which(pacific_is6$species=="unresolved")]<-NA #due to technical reviewer request
+pacific_is6$species[which(pacific_is6$species=="Agropogon_x lutosus")]<-"Agropogon lutosus_x" # altered  technical reviewer request
+
+aberhallo<-pacific_is6$orginal_name
+pacific_is6$orginal_name<-gsub("\r?\n|\r", " ", pacific_is6$orginal_name)# thanks @ technical review
+
 
 pacific_is7<-pacific_is6[which(!is.na(pacific_is6$island)),]
 
@@ -325,7 +415,7 @@ pacific_df<-pacific_df[which(!is.na(pacific_df$island)),]
 myapp<-island.unifier(pacific_is7$island,pacific_is7$islandgroup)
 
 pacific_is7$island<-myapp[,1]
-pacific_is7$islandgroup[which(pacific_is7$island=="Temotu")]
+
 
 pacific_is7$latitude<-"NA"
 pacific_is7$longitude<-"NA"
@@ -336,9 +426,30 @@ for (i in which(pacific_is7$island%in%pacific_df$island)){
 
 google_coords<-read.csv2("to_coord_table_2.csv")
 for( i in which(pacific_is7$island%in%google_coords$island)){
-  pacific_is7$longitude[i]<-google_coords$longitude[which(google_coords$island==pacific_is7$island[i])]
-  pacific_is7$latitude[i]<-google_coords$latitude[which(google_coords$island==pacific_is7$island[i])]
+  pacific_is7$longitude[i]<-google_coords$latitude[which(google_coords$island==pacific_is7$island[i])]
+  pacific_is7$latitude[i]<-google_coords$longitude[which(google_coords$island==pacific_is7$island[i])]
 }
+
+
+
+myapp<-island.unifier(pacific_is6$island,pacific_is6$islandgroup)
+
+pacific_is6$island<-myapp[,1]
+
+
+pacific_is6$latitude<-"NA"
+pacific_is6$longitude<-"NA"
+for (i in which(pacific_is6$island%in%pacific_df$island)){
+  pacific_is6$longitude[i]<-pacific_df$point_x[which(pacific_df$island==pacific_is6$island[i])]
+  pacific_is6$latitude[i]<-pacific_df$point_y[which(pacific_df$island==pacific_is6$island[i])]
+}
+
+google_coords<-read.csv2("to_coord_table_2.csv")
+for( i in which(pacific_is6$island%in%google_coords$island)){
+  pacific_is6$longitude[i]<-google_coords$latitude[which(google_coords$island==pacific_is6$island[i])]
+  pacific_is6$latitude[i]<-google_coords$longitude[which(google_coords$island==pacific_is6$island[i])]
+}
+
 
 ###
 myapp<-island.unifier(pacific_is6$island,pacific_is6$islandgroup)
@@ -361,10 +472,35 @@ for( i in which(pacific_is6$island%in%google_coords$island)){
   pacific_is6$latitude[i]<-google_coords$latitude[which(google_coords$island==pacific_is6$island[i])]
 }
 
+pacific_is6<-pacific_is6[,which(colnames(pacific_is6)%!in%c("nat_score2","inva_stat2","sp_is","sp_ar","dataset_ar"))]
+colnames(pacific_is6)[4:5]<-c("Native","Cultivated")
+colnames(pacific_is6)[9]<-"Invasive"
+colnames(pacific_is6)[10]<-"Original_name"
 
-write.csv2(pacific_ar6,"Species_list_group_1603.csv")
-write.csv2(pacific_is6,"Species_list_full_1603.csv")
-write.csv2(pacific_is7,"Species_list_island_1603.csv")
-#write.csv2(pacgr_s,"Species_mat_pacific_ars_1603.csv")
-write.csv2(pacgr,"Species_mat_group_1603.csv")
-write.csv2(pacis,"Species_mat_island_1603.csv")
+unused_ref<-unique(pier3$reference)[which((unique(pier3$reference)%!in%unique(pacific_is6$reference)))] # all glonaf references are included. 
+
+write.table(unused_ref,"Additional_references.txt")
+write.csv2(pacific_ar6,"Species_list_group_2905.csv")
+write.csv2(pacific_is6,"Species_list_full_2905.csv",row.names = F)
+
+
+colnames(pacific_is6)<-c("Species","Island","IslandGroup","Native","Cultivated","Family","Order","Database","Invasive","Original_name","Source","Source_ID","Latitude","Longitude")
+
+write.table(pacific_is6,"PacIFlora.txt",row.names = F)
+write.csv2(pacific_is7,"Species_list_island_2905.csv")
+#write.csv2(pacgr_s,"Species_mat_pacific_ars_2905.csv")
+write.csv2(pacgr,"Species_mat_group_2905.csv")
+write.csv2(pacis,"Species_mat_island_2905.csv")
+
+
+nrow(pacific_is6[which(pacific_is6$Invasive>0.51),])
+length(unique(pacific_is6$Species[which(pacific_is6$Cultivated>0.51)]))
+length(unique(pacific_is6$Species[which(pacific_is6$Native>0.51)]))
+length(unique(pacific_is6$Species[which(pacific_is6$Invasive>0.51)]))
+length(unique(pacific_is6$Species))
+nrow(pacific_is6)
+nrow(pacific_is6[which(is.na(pacific_is6$Island)),])
+nrow(pacific_is6[which(is.na(pacific_is6$Species)),])
+nrow(pacific_is6[which((pacific_is6$Species=="NA")),])
+length(unique(pacific_is6$Island))
+hist(pacific_is6$Native)
